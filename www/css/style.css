@@ -1,4 +1,12 @@
 /*
+ * GLOBAL STUFF SUCH AS THE FONT
+ */
+body {
+    font-family: sans-serif;
+    font-size:9pt;
+}
+
+/*
  * GENERAL UTILITY CLASSES
  */
 .right  { text-align: right; }
@@ -6,6 +14,8 @@
 .center { text-align: center; }
 .bold   { font-weight: bold; }
 .italic { font-style: italic; }
+.alert  { background-color:yellow; color:red; }
+.large  { font-size:125%; }
 
 /*
  * STYLES FOR ROLLING DICE
@@ -50,6 +60,22 @@ ion-content.content-padded {
 }
 ion-content.content-bigtable {
     margin:0 0 0 0;
+}
+
+/*
+ * SUBCLASSES OF TABLE for various padding needs, zebra stripe needs, etc
+ */
+div.table-zebra div.row:nth-child(even) {
+    background-color:rgba(0, 0, 0, 0.00);
+}
+div.table-zebra div.row:nth-child(odd) {
+    background-color:rgba(0, 0, 0, 0.05);
+}
+div.table-padded .row + .row {
+    margin-top:0 !important; /* override a Ionic default */
+}
+div.table-padded div.col {
+    padding:5px 0 5px 5px;
 }
 
 /*
