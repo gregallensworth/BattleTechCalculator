@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.btcalculator929998" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>BTCalculator</name>
+<widget id="info.atlasneurosystems.battletech-calculator" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>BattleTech Calculator</name>
   <description>
-        An Ionic Framework and Cordova project.
+        A calculator to keep your BattleTech game moving, without losing your place in all the math.
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+  <author email="greg.allensworth@gmail.com" href="http://atlasneurosystems.info/">
+      Atlas Neurosystems
     </author>
   <content src="index.html"/>
   <access origin="*"/>

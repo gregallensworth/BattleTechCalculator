@@ -1,7 +1,7 @@
 {
-  "name": "btcalculator",
+  "name": "battletechcalculator",
   "version": "1.1.1",
-  "description": "BTCalculator: An Ionic project",
+  "description": "BattleTech Calculator: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
