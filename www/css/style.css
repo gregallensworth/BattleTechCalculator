@@ -1,0 +1,63 @@
+/*
+ * GENERAL UTILITY CLASSES
+ */
+.right  { text-align: right; }
+.left   { text-align: left; }
+.center { text-align: center; }
+.bold   { font-weight: bold; }
+.italic { font-style: italic; }
+
+/*
+ * STYLES FOR ROLLING DICE
+ * AND FOR HIGHLIGHTING VARIOUS OUTCOMES
+ */
+.loading-container .loading {
+    background-color: rgba(255,255,255,0.0)
+}
+.backdrop {
+    background-color: rgba(255,255,255,0.8);
+}
+a {
+    text-decoration:none;
+    color:rgb(102,102,255) !important;
+    cursor:pointer;
+}
+a.dice {
+    color:rgb(102,102,255) !important;
+    cursor:pointer;
+    font-size:1.5em;
+}
+div.row.highlighted {
+    background-color:orange;
+}
+div.critical-no {
+    background-color:yellow;    
+    font-weight:bold;
+    text-align:center;
+}
+div.critical-yes {
+    background-color:red;
+    color:white;
+    font-weight:bold;
+    text-align:center;
+}
+
+/*
+ * SUBCLASSES OF ion-content for padded text, edge-to-edge tables, etc.
+ */
+ion-content.content-padded {
+    margin:1em 1em 1em 1em;
+}
+ion-content.content-bigtable {
+    margin:0 0 0 0;
+}
+
+/*
+ * IONIC OVERRIDES
+ */
+.row {
+    padding:0;
+}
+.row .col {
+    padding:.25em 1em 0.25em 1em;
+}
