@@ -16,6 +16,7 @@ body {
 .italic { font-style: italic; }
 .alert  { background-color:yellow; color:red; }
 .large  { font-size:125%; }
+.bottompad { margin-bottom:0.5em; }
 
 /*
  * STYLES FOR ROLLING DICE
