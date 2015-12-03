@@ -19,6 +19,16 @@ body {
 .bottompad { margin-bottom:0.5em; }
 
 /*
+ * SLIDE-IN MENU
+ */
+ion-side-menu[side="left"] i.icon {
+    float:right;
+}
+ion-side-menu[side="left"] a.item-content {
+    padding-right:10px;
+}
+
+/*
  * STYLES FOR ROLLING DICE
  * AND FOR HIGHLIGHTING VARIOUS OUTCOMES
  */
