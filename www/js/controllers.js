@@ -53,11 +53,11 @@ angular.module('main.controllers', ['ionic.utils'])
 
         // custom game mods, e.g. for your pilot or for the weather
         // see the MeleeQuirks loader below where we may be loading these from persistent storage
-        quirk1: { label:'Weather Quirk', value:'0' },
-        quirk2: { label:'Pilot Quirk', value:'0' },
-        quirk3: { label:'Mech Quirk', value:'0' },
-        quirk4: { label:'Weapon Quirk', value:'0' },
-        quirk5: { label:'Game Quirk', value:'0' },
+        quirk1: { label:'Pilot', value:'0' },
+        quirk2: { label:'Weather', value:'0' },
+        quirk3: { label:'Darkness', value:'0' },
+        quirk4: { label:'Other', value:'0' },
+        quirk5: { label:'Other', value:'0' },
 
         // current/last dice roll and outcome
         tohitnumber : ' ',
