@@ -20,21 +20,6 @@
             </div>
             <div class="row">
                 <div class="col col-33 bold">
-                    Range
-                </div>
-                <div class="col col-67">
-                    <select ng-model="viewdata.range" ng-change="recalculateToHit();">
-                        <option value="long">Long</option>
-                        <option value="medium">Medium</option>
-                        <option value="short">Short</option>
-                        <option value="min1">Under Minimum by 1</option>
-                        <option value="min2">Under Minimum by 1</option>
-                        <option value="min3">Under Minimum by 3</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col col-33 bold">
                     Attacker<br/>Movement<br/>&amp; Standing
                 </div>
                 <div class="col col-67">
@@ -191,6 +176,21 @@
                         {{ viewdata.quirk5.label }}
                         <a class="quirk-edit-button" href="javascript:void(0);" ng-click="openQuirkLabelEditor('quirk5');"><i class="icon ion-edit icon-accessory"></i></a>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-33 bold">
+                    Target Range<br/>for This Weapon
+                </div>
+                <div class="col col-67">
+                    <select ng-model="viewdata.range" ng-change="recalculateToHit();" style="margin-top:0.75em;">
+                        <option value="long">Long</option>
+                        <option value="medium">Medium</option>
+                        <option value="short">Short</option>
+                        <option value="min1">Under Minimum by 1</option>
+                        <option value="min2">Under Minimum by 1</option>
+                        <option value="min3">Under Minimum by 3</option>
+                    </select>
                 </div>
             </div>
         </div><!-- end of table -->
