@@ -64,12 +64,15 @@ angular.module('main.controllers', ['ionic.utils'])
         dice: { rolled:'', hitmiss:'' },
     };
 
-    // try to load up the quirks saved in persistent storage
-    var q = $localStorage.getObject("MeleeQuirks-quirk1"); if (q.label) $scope.viewdata.quirk1 = q;
-    var q = $localStorage.getObject("MeleeQuirks-quirk2"); if (q.label) $scope.viewdata.quirk2 = q;
-    var q = $localStorage.getObject("MeleeQuirks-quirk3"); if (q.label) $scope.viewdata.quirk3 = q;
-    var q = $localStorage.getObject("MeleeQuirks-quirk4"); if (q.label) $scope.viewdata.quirk4 = q;
-    var q = $localStorage.getObject("MeleeQuirks-quirk5"); if (q.label) $scope.viewdata.quirk5 = q;
+    // try to override those defaults, with values pulled from persistent storage
+    // don't try to get too optimized by making tight little loops; this is likely to evolve and any such optimization is bound to be premature
+    // see the storePersistent() and openQuirkLabelEditor() functions for how these get stored in the first place
+    var q = $localStorage.get('MeleeVars-attackerpiloting'); if (q) $scope.viewdata['attackerpiloting'] = q;
+    var q = $localStorage.getObject('MeleeQuirks-quirk1'); if (q.label) $scope.viewdata.quirk1 = q;
+    var q = $localStorage.getObject('MeleeQuirks-quirk2'); if (q.label) $scope.viewdata.quirk2 = q;
+    var q = $localStorage.getObject('MeleeQuirks-quirk3'); if (q.label) $scope.viewdata.quirk3 = q;
+    var q = $localStorage.getObject('MeleeQuirks-quirk4'); if (q.label) $scope.viewdata.quirk4 = q;
+    var q = $localStorage.getObject('MeleeQuirks-quirk5'); if (q.label) $scope.viewdata.quirk5 = q;
 
     // the recalculation function whenever someone changes a variable
     $scope.recalculateToHit = function () {
@@ -200,6 +203,13 @@ angular.module('main.controllers', ['ionic.utils'])
             var key = "MeleeQuirks-"+whichquirk;
             $localStorage.setObject(key,$scope.viewdata[whichquirk]);
         });
+    };
+
+    // an ability to store an arbitrary field as persistent; see also the top of this controller where we reload these
+    $scope.storePersistent = function (variable) {
+        var key   = "MeleeVars-"+variable;
+        var value = $scope.viewdata[variable];
+        $localStorage.set(key,value);
     };
 
     // okay, let's start some code to load our state
