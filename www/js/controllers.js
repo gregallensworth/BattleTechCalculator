@@ -19,9 +19,9 @@ angular.module('main.controllers', [])
 .controller('AboutCtrl', function($scope) {
     // nothing here; this panel has no actions ... yet
 })
-.controller('WeaponHitCtrl', function($scope,$dice,$ionicLoading) {
+.controller('WeaponHitCtrl', function($scope,$dice,$ionicLoading,$ionicPopup) {
 })
-.controller('MeleeHitCtrl', function($scope,$dice,$ionicLoading) {
+.controller('MeleeHitCtrl', function($scope,$dice,$ionicLoading,$ionicPopup) {
     // default values for selectors and checkboxes and widgets
     $scope.viewdata = {
         attacktype: "punch",
@@ -165,6 +165,22 @@ angular.module('main.controllers', [])
             $scope.viewdata.dice.rolled  = $scope.$dice.roll2d6();
             $scope.viewdata.dice.hitmiss = $scope.viewdata.dice.rolled >= $scope.viewdata.tohitnumber ? 'Hit' : 'Miss';
         }, 1000);
+    };
+
+    // open an editing modal, so they can change the text for a quirk
+    // parameter: the quirknumber, used to resolve which quirk# is being relabeled, e.g. 1 for "quirk1"
+    $scope.openQuirkLabelEditor = function (whichquirk) {
+        $ionicPopup.prompt({
+            title: 'Quirk Name',
+            //template: 'Enter the label for this gameplay modifier (quirk).',
+            defaultText: $scope.viewdata[whichquirk].label,
+            okText: 'Save',
+            cancelType: 'button-stable',
+            okType: 'button-dark',
+        }).then(function(quirklabel) {
+            if (! quirklabel ) return false; // they canceled, or entered nothing; skip out and leave the label unchanged
+            $scope.viewdata[whichquirk].label = quirklabel;
+        });
     };
 
     // okay, let's start some code to load our state

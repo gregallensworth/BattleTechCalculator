@@ -89,6 +89,17 @@ div.table-padded div.col {
     padding:5px 0 5px 5px;
 }
 
+
+/*
+ * HACKS for some specific use cases
+ */
+a.quirk-edit-button {
+    margin-left:1em;
+    cursor:pointer;
+    color:black !important;
+}
+
+
 /*
  * IONIC OVERRIDES
  */
