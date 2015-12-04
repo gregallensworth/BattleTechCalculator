@@ -174,6 +174,7 @@ angular.module('main.controllers', [])
             title: 'Quirk Name',
             //template: 'Enter the label for this gameplay modifier (quirk).',
             defaultText: $scope.viewdata[whichquirk].label,
+            maxLength: 20,
             okText: 'Save',
             cancelType: 'button-stable',
             okType: 'button-dark',
