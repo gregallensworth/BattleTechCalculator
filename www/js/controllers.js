@@ -1,5 +1,5 @@
 "use strict";
-angular.module('main.controllers', [])
+angular.module('main.controllers', ['ionic.utils'])
 .controller('MainCtrl', function($scope,$dice,$ionicPopup) {
     // this is the root controller enclosing all the rest defined below
     // this is a good place to copy services for use in views
@@ -19,11 +19,12 @@ angular.module('main.controllers', [])
 .controller('AboutCtrl', function($scope) {
     // nothing here; this panel has no actions ... yet
 })
-.controller('WeaponHitCtrl', function($scope,$dice,$ionicLoading,$ionicPopup) {
+.controller('WeaponHitCtrl', function($scope,$dice,$ionicLoading,$ionicPopup,$localStorage) {
 })
-.controller('MeleeHitCtrl', function($scope,$dice,$ionicLoading,$ionicPopup) {
+.controller('MeleeHitCtrl', function($scope,$dice,$ionicLoading,$ionicPopup,$localStorage) {
     // default values for selectors and checkboxes and widgets
     $scope.viewdata = {
+        // the various selectors and widgets per the rulebook
         attacktype: "punch",
         attackerpiloting: "5",
         defenderpiloting: "5",
@@ -49,15 +50,26 @@ angular.module('main.controllers', [])
             legl    : false,
             foot    : false,
         },
+
+        // custom game mods, e.g. for your pilot or for the weather
+        // see the MeleeQuirks loader below where we may be loading these from persistent storage
         quirk1: { label:'Weather Quirk', value:'0' },
         quirk2: { label:'Pilot Quirk', value:'0' },
         quirk3: { label:'Mech Quirk', value:'0' },
         quirk4: { label:'Weapon Quirk', value:'0' },
         quirk5: { label:'Game Quirk', value:'0' },
+
+        // current/last dice roll and outcome
+        tohitnumber : ' ',
+        dice: { rolled:'', hitmiss:'' },
     };
 
-    $scope.viewdata.tohitnumber = ' ';
-    $scope.viewdata.dice = { rolled:'', hitmiss:'' };
+    // try to load up the quirks saved in persistent storage
+    var q = $localStorage.getObject("MeleeQuirks-quirk1"); if (q.label) $scope.viewdata.quirk1 = q;
+    var q = $localStorage.getObject("MeleeQuirks-quirk2"); if (q.label) $scope.viewdata.quirk2 = q;
+    var q = $localStorage.getObject("MeleeQuirks-quirk3"); if (q.label) $scope.viewdata.quirk3 = q;
+    var q = $localStorage.getObject("MeleeQuirks-quirk4"); if (q.label) $scope.viewdata.quirk4 = q;
+    var q = $localStorage.getObject("MeleeQuirks-quirk5"); if (q.label) $scope.viewdata.quirk5 = q;
 
     // the recalculation function whenever someone changes a variable
     $scope.recalculateToHit = function () {
@@ -180,7 +192,13 @@ angular.module('main.controllers', [])
             okType: 'button-dark',
         }).then(function(quirklabel) {
             if (! quirklabel ) return false; // they canceled, or entered nothing; skip out and leave the label unchanged
+
+            // update it here in memory...
             $scope.viewdata[whichquirk].label = quirklabel;
+
+            // ... and also in local storage so it can be recalled later; the recall would of course be done at the top of the controller, when setting default values
+            var key = "MeleeQuirks-"+whichquirk;
+            $localStorage.setObject(key,$scope.viewdata[whichquirk]);
         });
     };
 
