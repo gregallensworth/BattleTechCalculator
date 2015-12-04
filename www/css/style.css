@@ -26,6 +26,8 @@ ion-side-menu[side="left"] i.icon {
 }
 ion-side-menu[side="left"] a.item-content {
     padding-right:10px;
+    color: black !important;
+    font-weight:bold;
 }
 
 /*
