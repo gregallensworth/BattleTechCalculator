@@ -1,0 +1,24 @@
+#!/bin/sh
+# script to build the app, sign it, align it
+
+KEYSTORE="A:\Archive\My Documents\Code Signing and Mobile Apps\GregAllensworth.jks"
+KEYALIAS="gregor"
+
+RAWAPK="platforms/android/build/outputs/apk/android-release-unsigned.apk"
+SIGNAPK="BattleTechCalculator-release.apk"
+
+#############################################################
+
+rm -f "$SIGNAPK" "$RAWAPK"
+
+ionic build android --release
+
+jarsigner -sigalg SHA1withRSA -digestalg SHA1 -keystore "$KEYSTORE" "$RAWAPK" "$KEYALIAS"
+
+echo "Aligning ZIP"
+"/cygdrive/c/Program Files (x86)/Android/android-sdk/build-tools/23.0.2/zipalign.exe" -f 4 "$RAWAPK" "$SIGNAPK"
+
+echo ""
+echo "DONE:"
+ls -lh "$SIGNAPK"
+
