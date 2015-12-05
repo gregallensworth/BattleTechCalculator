@@ -102,7 +102,7 @@ div.table-padded div.col {
 
 
 /*
- * Quirks buttons and labels
+ * QUIRKS BUTTONS AND LABELS
  */
 a.quirk-edit-button {
     cursor:pointer;
@@ -118,6 +118,15 @@ span.quirk-label {
 /*
  * IONIC OVERRIDES
  */
+.popup-head {
+    background-color: #444;
+}
+.popup-title {
+    color: #fff;
+}
+.popup {
+    border:2px solid #444;
+}
 .row {
     padding:0;
 }
