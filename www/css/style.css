@@ -93,14 +93,18 @@ div.table-padded div.col {
 
 
 /*
- * HACKS for some specific use cases
+ * Quirks buttons and labels
  */
 a.quirk-edit-button {
-    margin-left:1em;
     cursor:pointer;
     color:black !important;
+    font-size: 125%;
+    padding-right:1em;
+    padding-left:1em;
 }
-
+span.quirk-label {
+    font-size: 125%;
+}
 
 /*
  * IONIC OVERRIDES
