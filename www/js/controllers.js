@@ -155,7 +155,6 @@ angular.module('main.controllers', ['ionic.utils'])
                 break;
         }
 
-        //gda
         // attacker movement, prone status (jumped! biffed it!)
         if ($scope.viewdata.attackerprone) $scope.viewdata.tohitnumber += 2;
 
@@ -460,7 +459,7 @@ angular.module('main.controllers', ['ionic.utils'])
     // default values for selectors and checkboxes and widgets
     $scope.viewdata = {
         outcome  : 0,
-        critroll : 0,
+        critroll : null,
         crithits : 0,
     };
 
@@ -476,11 +475,13 @@ angular.module('main.controllers', ['ionic.utils'])
             $scope.viewdata.outcome = $scope.$dice.roll2d6();
             $ionicLoading.hide();
 
+//GDA
+$scope.viewdata.outcome = 2;
             // whoa there! on a 2 we do an additional roll to detect a critical hit
             // and that crithit means a second roll for how many crits they earned
             // tip: there's no critical hit calculator, since every mech is different
             if (2 != $scope.viewdata.outcome) {
-                $scope.viewdata.critroll = 0;
+                $scope.viewdata.critroll = null;
                 $scope.viewdata.crithits = 0;
             } else {
                 $scope.viewdata.critroll = $scope.$dice.roll2d6();
