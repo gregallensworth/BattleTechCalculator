@@ -231,7 +231,6 @@ angular.module('main.controllers', ['ionic.utils'])
     $scope.openQuirkLabelEditor = function (whichquirk) {
         $ionicPopup.prompt({
             title: 'Quirk Name',
-            //template: 'Enter the label for this gameplay modifier (quirk).',
             defaultText: $scope.viewdata[whichquirk].label,
             maxLength: 20,
             okText: 'Save',
@@ -459,36 +458,32 @@ angular.module('main.controllers', ['ionic.utils'])
     // default values for selectors and checkboxes and widgets
     $scope.viewdata = {
         outcome  : 0,
-        critroll : null,
-        crithits : 0,
+        critmessage : '',
     };
 
     // dice roller function
     // show a modal and wait a second, then roll dice
     // $ionicLoading.show() does support an automatic timeout, but visually it works better to highlight the outcome AFTER the delay as if dice had been really rolled
     $scope.rollAndHighlight = function () {
+        $scope.viewdata.outcome     = 0;
+        $scope.viewdata.critmessage = '';
+
         $ionicLoading.show({
             templateUrl: 'views/roll2d6.html'
         });
-        $scope.viewdata.outcome = 0;
         setTimeout(function () {
-            $scope.viewdata.outcome = $scope.$dice.roll2d6();
             $ionicLoading.hide();
+            $scope.viewdata.outcome = $scope.$dice.roll2d6();
 
-//GDA
-$scope.viewdata.outcome = 2;
             // whoa there! on a 2 we do an additional roll to detect a critical hit
             // and that crithit means a second roll for how many crits they earned
             // tip: there's no critical hit calculator, since every mech is different
-            if (2 != $scope.viewdata.outcome) {
-                $scope.viewdata.critroll = null;
-                $scope.viewdata.crithits = 0;
-            } else {
-                $scope.viewdata.critroll = $scope.$dice.roll2d6();
-                if      ($scope.viewdata.critroll <= 7)  $scope.viewdata.crithits = 0;
-                else if ($scope.viewdata.critroll <= 9)  $scope.viewdata.crithits = 1;
-                else if ($scope.viewdata.critroll < 12)  $scope.viewdata.crithits = 2;
-                else                                     $scope.viewdata.crithits = 3;
+            if ($scope.viewdata.outcome == 2) {
+                var critroll = $scope.$dice.roll2d6();
+                if      (critroll <= 7)  $scope.viewdata.critmessage = "Critical: Rolled " + critroll + ", " + "No critical hits";
+                else if (critroll <= 9)  $scope.viewdata.critmessage = "Critical: Rolled " + critroll + ", " + "1 critical hits";
+                else if (critroll < 12)  $scope.viewdata.critmessage = "Critical: Rolled " + critroll + ", " + "2 critical hits";
+                else                     $scope.viewdata.critmessage = "Critical: Rolled " + critroll + ", " + "3 critical hits";
             }
         }, 1000);
     };
@@ -504,13 +499,14 @@ $scope.viewdata.outcome = 2;
     // show a modal and wait a second, then roll dice
     // $ionicLoading.show() does support an automatic timeout, but visually it works better to highlight the outcome AFTER the delay as if dice had been really rolled
     $scope.rollAndHighlight = function () {
+        $scope.viewdata.outcome = 0;
+ 
         $ionicLoading.show({
             templateUrl: 'views/roll1d6.html'
         });
-        $scope.viewdata.outcome = 0;
         setTimeout(function () {
-            $scope.viewdata.outcome = $scope.$dice.roll1d6();
             $ionicLoading.hide();
+            $scope.viewdata.outcome = $scope.$dice.roll1d6();
         }, 1000);
     };
 })

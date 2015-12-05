@@ -3,7 +3,7 @@
 
         <div class="row">
             <div class="col right">
-                <a href="javascript:void(0);" ng-click="rollAndHighlight();" style="display:inline-block;"><img src="img/die.svg"></i></a>
+                <a href="javascript:void(0);" ng-click="rollAndHighlight();" style="display:inline-block;"><img src="img/die.svg"></a>
             </div>
             <div class="col center bold">Left<br/>Side</div>
             <div class="col center bold">Front<br/>Rear</div>
@@ -79,29 +79,9 @@
             </div>
         </div><!--/zebra-->
 
-        <div ng-show="viewdata.critroll !== null">
-            <div ng-show="viewdata.crithits == 0" class="critical-no">
-                Critical: {{ viewdata.critroll }}
-                <br/>
-                No critical hit.
-            </div>
-            <div ng-show="viewdata.crithits == 1" class="critical-yes">
-                Critical: {{ viewdata.critroll }}
-                <br/>
-                Achieved ONE critical hit.
-            </div>
-            <div ng-show="viewdata.crithits == 2" class="critical-yes">
-                Critical: {{ viewdata.critroll }}
-                <br/>
-                Achieved TWO critical hits.
-            </div>
-            <div ng-show="viewdata.crithits == 3" class="critical-yes">
-                Critical: {{ viewdata.critroll }}
-                <br/>
-                Achieved THREE critical hits.
-                <br/>
-                Arm or Leg destroyed. Head is fatal.
-            </div>
+        <!-- critical hits readout if indeed there were any -->
+        <div class="criticalhit-message" ng-class="viewdata.critmessage ? 'critical-show' : 'critical-hide'">
+            {{ viewdata.critmessage }}
         </div>
 
     </ion-content>

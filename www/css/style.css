@@ -62,16 +62,17 @@ div.row.highlighted {
 .rolloutcome.miss {
     background-color:yellow;    
 }
-.critical-no {
-    background-color:yellow;    
+.criticalhit-message {
     font-weight:bold;
     text-align:center;
+    padding-top:1em;
+    padding-bottom:1em;
 }
-.critical-yes {
-    background-color:red;
-    color:white;
-    font-weight:bold;
-    text-align:center;
+.criticalhit-message.critical-show {
+    background-color:yellow;    
+}
+.criticalhit-message.critical-hide {
+    background-color:white;
 }
 
 /*
