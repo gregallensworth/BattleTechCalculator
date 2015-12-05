@@ -51,7 +51,7 @@ a.dice {
     font-size:1.5em;
 }
 div.row.highlighted {
-    background-color:orange;
+    background-color:orange !important;
 }
 div.critical-no {
     background-color:yellow;    

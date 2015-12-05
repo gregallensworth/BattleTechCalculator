@@ -19,59 +19,60 @@
             <div class="col center bold">Right<br/>Side</div>
         </div>
 
-        <div ng-show="viewdata.meleetype == 'punch'">
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 1}">
-                <div class="col bold right">1</div>
-                <div class="col center">L. Torso</div>
-                <div class="col center">L. Arm</div>
-                <div class="col center">R. Torso</div>
+        <div class="table-zebra">
+            <div ng-show="viewdata.meleetype == 'punch'">
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 1}">
+                    <div class="col bold right">1</div>
+                    <div class="col center">L. Torso</div>
+                    <div class="col center">L. Arm</div>
+                    <div class="col center">R. Torso</div>
+                </div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 2}">
+                    <div class="col bold right">2</div>
+                    <div class="col center">L. Torso</div>
+                    <div class="col center">L. Torso</div>
+                    <div class="col center">R. Torso</div>
+                </div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 3}">
+                    <div class="col bold right">3</div>
+                    <div class="col center">C. Torso</div>
+                    <div class="col center">C. Torso</div>
+                    <div class="col center">C. Torso</div>
+                </div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 4}">
+                    <div class="col bold right">4</div>
+                    <div class="col center">L. Arm</div>
+                    <div class="col center">R. Torso</div>
+                    <div class="col center">R. Arm</div>
+                </div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 5}">
+                    <div class="col bold right">5</div>
+                    <div class="col center">L. Arm</div>
+                    <div class="col center">R. Arm</div>
+                    <div class="col center">R. Arm</div>
+                </div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 6}">
+                    <div class="col bold right">6</div>
+                    <div class="col center">Head</div>
+                    <div class="col center">Head</div>
+                    <div class="col center">Head</div>
+                </div>
             </div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 2}">
-                <div class="col bold right">2</div>
-                <div class="col center">L. Torso</div>
-                <div class="col center">L. Torso</div>
-                <div class="col center">R. Torso</div>
+            <div ng-show="viewdata.meleetype == 'kick'">
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 1 || viewdata.outcome == 2 || viewdata.outcome == 3}">
+                    <div class="col bold right">1-3</div>
+                    <div class="col center">L. Leg</div>
+                    <div class="col center">R. Leg</div>
+                    <div class="col center">R. Leg</div>
+                </div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 4 || viewdata.outcome == 5 || viewdata.outcome == 6}">
+                    <div class="col bold right">4-6</div>
+                    <div class="col center">L. Leg</div>
+                    <div class="col center">L. Leg</div>
+                    <div class="col center">R. Leg</div>
+                </div>
             </div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 3}">
-                <div class="col bold right">3</div>
-                <div class="col center">C. Torso</div>
-                <div class="col center">C. Torso</div>
-                <div class="col center">C. Torso</div>
-            </div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 4}">
-                <div class="col bold right">4</div>
-                <div class="col center">L. Arm</div>
-                <div class="col center">R. Torso</div>
-                <div class="col center">R. Arm</div>
-            </div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 5}">
-                <div class="col bold right">5</div>
-                <div class="col center">L. Arm</div>
-                <div class="col center">R. Arm</div>
-                <div class="col center">R. Arm</div>
-            </div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 6}">
-                <div class="col bold right">6</div>
-                <div class="col center">Head</div>
-                <div class="col center">Head</div>
-                <div class="col center">Head</div>
-            </div>
-        </div>
-        <div ng-show="viewdata.meleetype == 'kick'">
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 1 || viewdata.outcome == 2 || viewdata.outcome == 3}">
-                <div class="col bold right">1-3</div>
-                <div class="col center">L. Leg</div>
-                <div class="col center">R. Leg</div>
-                <div class="col center">R. Leg</div>
-            </div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 4 || viewdata.outcome == 5 || viewdata.outcome == 6}">
-                <div class="col bold right">4-6</div>
-                <div class="col center">L. Leg</div>
-                <div class="col center">L. Leg</div>
-                <div class="col center">R. Leg</div>
-            </div>
-        </div>
-
+        </div><!--/zebra-->
 
     </ion-content>
 </ion-view>

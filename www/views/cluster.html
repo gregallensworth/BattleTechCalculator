@@ -19,96 +19,99 @@
         </div>
 
         <!-- which one shows? depends on the weapon selection above -->
-        <div class="weapon" ng-show="viewdata.clustersize == 2">
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 2}"><div class="col right bold"> 2</div><div class="col left">1 hit </div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 3}"><div class="col right bold"> 3</div><div class="col left">1 hit </div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 4}"><div class="col right bold"> 4</div><div class="col left">1 hit </div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 5}"><div class="col right bold"> 5</div><div class="col left">1 hit </div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 6}"><div class="col right bold"> 6</div><div class="col left">1 hit </div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 7}"><div class="col right bold"> 7</div><div class="col left">1 hit </div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 8}"><div class="col right bold"> 8</div><div class="col left">2 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 9}"><div class="col right bold"> 9</div><div class="col left">2 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome ==10}"><div class="col right bold">10</div><div class="col left">2 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome ==11}"><div class="col right bold">11</div><div class="col left">2 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome ==12}"><div class="col right bold">12</div><div class="col left">2 hits</div></div>
-        </div>
-        <div class="weapon" ng-show="viewdata.clustersize == 4">
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 2}"><div class="col right bold"> 2</div><div class="col left">1 hit </div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 3}"><div class="col right bold"> 3</div><div class="col left">2 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 4}"><div class="col right bold"> 4</div><div class="col left">2 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 5}"><div class="col right bold"> 5</div><div class="col left">2 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 6}"><div class="col right bold"> 6</div><div class="col left">2 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 7}"><div class="col right bold"> 7</div><div class="col left">3 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 8}"><div class="col right bold"> 8</div><div class="col left">3 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 9}"><div class="col right bold"> 9</div><div class="col left">3 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome ==10}"><div class="col right bold">10</div><div class="col left">3 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome ==11}"><div class="col right bold">11</div><div class="col left">4 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome ==12}"><div class="col right bold">12</div><div class="col left">4 hits</div></div>
-        </div>
-        <div class="weapon" ng-show="viewdata.clustersize == 6">
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 2}"><div class="col right bold"> 2</div><div class="col left">2 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 3}"><div class="col right bold"> 3</div><div class="col left">2 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 4}"><div class="col right bold"> 4</div><div class="col left">3 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 5}"><div class="col right bold"> 5</div><div class="col left">3 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 6}"><div class="col right bold"> 6</div><div class="col left">4 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 7}"><div class="col right bold"> 7</div><div class="col left">4 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 8}"><div class="col right bold"> 8</div><div class="col left">4 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 9}"><div class="col right bold"> 9</div><div class="col left">5 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome ==10}"><div class="col right bold">10</div><div class="col left">5 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome ==11}"><div class="col right bold">11</div><div class="col left">6 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome ==12}"><div class="col right bold">12</div><div class="col left">6 hits</div></div>
-        </div>
-        <div class="weapon" ng-show="viewdata.clustersize == 5">
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 2}"><div class="col right bold"> 2</div><div class="col left">1 hit </div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 3}"><div class="col right bold"> 3</div><div class="col left">2 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 4}"><div class="col right bold"> 4</div><div class="col left">2 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 5}"><div class="col right bold"> 5</div><div class="col left">3 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 6}"><div class="col right bold"> 6</div><div class="col left">3 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 7}"><div class="col right bold"> 7</div><div class="col left">3 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 8}"><div class="col right bold"> 8</div><div class="col left">3 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 9}"><div class="col right bold"> 9</div><div class="col left">4 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome ==10}"><div class="col right bold">10</div><div class="col left">4 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome ==11}"><div class="col right bold">11</div><div class="col left">5 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome ==12}"><div class="col right bold">12</div><div class="col left">5 hits</div></div>
-        </div>
-        <div class="weapon" ng-show="viewdata.clustersize == 10">
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 2}"><div class="col right bold"> 2</div><div class="col left"> 3 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 3}"><div class="col right bold"> 3</div><div class="col left"> 3 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 4}"><div class="col right bold"> 4</div><div class="col left"> 4 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 5}"><div class="col right bold"> 5</div><div class="col left"> 6 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 6}"><div class="col right bold"> 6</div><div class="col left"> 6 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 7}"><div class="col right bold"> 7</div><div class="col left"> 6 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 8}"><div class="col right bold"> 8</div><div class="col left"> 6 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 9}"><div class="col right bold"> 9</div><div class="col left"> 8 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome ==10}"><div class="col right bold">10</div><div class="col left"> 8 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome ==11}"><div class="col right bold">11</div><div class="col left">10 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome ==12}"><div class="col right bold">12</div><div class="col left">10 hits</div></div>
-        </div>
-        <div class="weapon" ng-show="viewdata.clustersize == 15">
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 2}"><div class="col right bold"> 2</div><div class="col left"> 5 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 3}"><div class="col right bold"> 3</div><div class="col left"> 5 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 4}"><div class="col right bold"> 4</div><div class="col left"> 6 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 5}"><div class="col right bold"> 5</div><div class="col left"> 9 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 6}"><div class="col right bold"> 6</div><div class="col left"> 9 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 7}"><div class="col right bold"> 7</div><div class="col left"> 9 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 8}"><div class="col right bold"> 8</div><div class="col left"> 9 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 9}"><div class="col right bold"> 9</div><div class="col left">12 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome ==10}"><div class="col right bold">10</div><div class="col left">12 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome ==11}"><div class="col right bold">11</div><div class="col left">15 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome ==12}"><div class="col right bold">12</div><div class="col left">15 hits</div></div>
-        </div>
-        <div class="weapon" ng-show="viewdata.clustersize == 20">
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 2}"><div class="col right bold"> 2</div><div class="col left"> 6 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 3}"><div class="col right bold"> 3</div><div class="col left"> 6 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 4}"><div class="col right bold"> 4</div><div class="col left"> 9 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 5}"><div class="col right bold"> 5</div><div class="col left">12 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 6}"><div class="col right bold"> 6</div><div class="col left">12 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 7}"><div class="col right bold"> 7</div><div class="col left">12 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 8}"><div class="col right bold"> 8</div><div class="col left">12 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome == 9}"><div class="col right bold"> 9</div><div class="col left">16 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome ==10}"><div class="col right bold">10</div><div class="col left">16 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome ==11}"><div class="col right bold">11</div><div class="col left">20 hits</div></div>
-            <div class="row" ng-class="{ highlighted:viewdata.outcome ==12}"><div class="col right bold">12</div><div class="col left">20 hits</div></div>
-        </div>
+        <div class="table-zebra">
+            <div class="weapon" ng-show="viewdata.clustersize == 2">
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 2}"><div class="col right bold"> 2</div><div class="col left">1 hit </div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 3}"><div class="col right bold"> 3</div><div class="col left">1 hit </div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 4}"><div class="col right bold"> 4</div><div class="col left">1 hit </div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 5}"><div class="col right bold"> 5</div><div class="col left">1 hit </div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 6}"><div class="col right bold"> 6</div><div class="col left">1 hit </div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 7}"><div class="col right bold"> 7</div><div class="col left">1 hit </div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 8}"><div class="col right bold"> 8</div><div class="col left">2 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 9}"><div class="col right bold"> 9</div><div class="col left">2 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome ==10}"><div class="col right bold">10</div><div class="col left">2 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome ==11}"><div class="col right bold">11</div><div class="col left">2 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome ==12}"><div class="col right bold">12</div><div class="col left">2 hits</div></div>
+            </div>
+            <div class="weapon" ng-show="viewdata.clustersize == 4">
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 2}"><div class="col right bold"> 2</div><div class="col left">1 hit </div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 3}"><div class="col right bold"> 3</div><div class="col left">2 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 4}"><div class="col right bold"> 4</div><div class="col left">2 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 5}"><div class="col right bold"> 5</div><div class="col left">2 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 6}"><div class="col right bold"> 6</div><div class="col left">2 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 7}"><div class="col right bold"> 7</div><div class="col left">3 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 8}"><div class="col right bold"> 8</div><div class="col left">3 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 9}"><div class="col right bold"> 9</div><div class="col left">3 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome ==10}"><div class="col right bold">10</div><div class="col left">3 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome ==11}"><div class="col right bold">11</div><div class="col left">4 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome ==12}"><div class="col right bold">12</div><div class="col left">4 hits</div></div>
+            </div>
+            <div class="weapon" ng-show="viewdata.clustersize == 6">
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 2}"><div class="col right bold"> 2</div><div class="col left">2 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 3}"><div class="col right bold"> 3</div><div class="col left">2 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 4}"><div class="col right bold"> 4</div><div class="col left">3 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 5}"><div class="col right bold"> 5</div><div class="col left">3 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 6}"><div class="col right bold"> 6</div><div class="col left">4 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 7}"><div class="col right bold"> 7</div><div class="col left">4 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 8}"><div class="col right bold"> 8</div><div class="col left">4 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 9}"><div class="col right bold"> 9</div><div class="col left">5 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome ==10}"><div class="col right bold">10</div><div class="col left">5 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome ==11}"><div class="col right bold">11</div><div class="col left">6 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome ==12}"><div class="col right bold">12</div><div class="col left">6 hits</div></div>
+            </div>
+            <div class="weapon" ng-show="viewdata.clustersize == 5">
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 2}"><div class="col right bold"> 2</div><div class="col left">1 hit </div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 3}"><div class="col right bold"> 3</div><div class="col left">2 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 4}"><div class="col right bold"> 4</div><div class="col left">2 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 5}"><div class="col right bold"> 5</div><div class="col left">3 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 6}"><div class="col right bold"> 6</div><div class="col left">3 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 7}"><div class="col right bold"> 7</div><div class="col left">3 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 8}"><div class="col right bold"> 8</div><div class="col left">3 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 9}"><div class="col right bold"> 9</div><div class="col left">4 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome ==10}"><div class="col right bold">10</div><div class="col left">4 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome ==11}"><div class="col right bold">11</div><div class="col left">5 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome ==12}"><div class="col right bold">12</div><div class="col left">5 hits</div></div>
+            </div>
+            <div class="weapon" ng-show="viewdata.clustersize == 10">
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 2}"><div class="col right bold"> 2</div><div class="col left"> 3 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 3}"><div class="col right bold"> 3</div><div class="col left"> 3 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 4}"><div class="col right bold"> 4</div><div class="col left"> 4 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 5}"><div class="col right bold"> 5</div><div class="col left"> 6 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 6}"><div class="col right bold"> 6</div><div class="col left"> 6 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 7}"><div class="col right bold"> 7</div><div class="col left"> 6 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 8}"><div class="col right bold"> 8</div><div class="col left"> 6 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 9}"><div class="col right bold"> 9</div><div class="col left"> 8 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome ==10}"><div class="col right bold">10</div><div class="col left"> 8 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome ==11}"><div class="col right bold">11</div><div class="col left">10 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome ==12}"><div class="col right bold">12</div><div class="col left">10 hits</div></div>
+            </div>
+            <div class="weapon" ng-show="viewdata.clustersize == 15">
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 2}"><div class="col right bold"> 2</div><div class="col left"> 5 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 3}"><div class="col right bold"> 3</div><div class="col left"> 5 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 4}"><div class="col right bold"> 4</div><div class="col left"> 6 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 5}"><div class="col right bold"> 5</div><div class="col left"> 9 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 6}"><div class="col right bold"> 6</div><div class="col left"> 9 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 7}"><div class="col right bold"> 7</div><div class="col left"> 9 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 8}"><div class="col right bold"> 8</div><div class="col left"> 9 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 9}"><div class="col right bold"> 9</div><div class="col left">12 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome ==10}"><div class="col right bold">10</div><div class="col left">12 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome ==11}"><div class="col right bold">11</div><div class="col left">15 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome ==12}"><div class="col right bold">12</div><div class="col left">15 hits</div></div>
+            </div>
+            <div class="weapon" ng-show="viewdata.clustersize == 20">
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 2}"><div class="col right bold"> 2</div><div class="col left"> 6 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 3}"><div class="col right bold"> 3</div><div class="col left"> 6 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 4}"><div class="col right bold"> 4</div><div class="col left"> 9 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 5}"><div class="col right bold"> 5</div><div class="col left">12 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 6}"><div class="col right bold"> 6</div><div class="col left">12 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 7}"><div class="col right bold"> 7</div><div class="col left">12 hits</div></div>
+                    <div class="row" ng-class="{ highlighted:viewdata.outcome == 8}"><div class="col right bold"> 8</div><div class="col left">12 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome == 9}"><div class="col right bold"> 9</div><div class="col left">16 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome ==10}"><div class="col right bold">10</div><div class="col left">16 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome ==11}"><div class="col right bold">11</div><div class="col left">20 hits</div></div>
+                <div class="row" ng-class="{ highlighted:viewdata.outcome ==12}"><div class="col right bold">12</div><div class="col left">20 hits</div></div>
+            </div>
+        </div><!-- /zebra -->
+
     </ion-content>
 </ion-view>
