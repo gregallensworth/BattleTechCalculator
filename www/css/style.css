@@ -53,12 +53,21 @@ a.dice {
 div.row.highlighted {
     background-color:orange !important;
 }
-div.critical-no {
+.rolloutcome {
+    line-height:26px; /* match the div.svg */
+}
+.rolloutcome.hit {
+    background-color:orange;    
+}
+.rolloutcome.miss {
+    background-color:yellow;    
+}
+.critical-no {
     background-color:yellow;    
     font-weight:bold;
     text-align:center;
 }
-div.critical-yes {
+.critical-yes {
     background-color:red;
     color:white;
     font-weight:bold;
