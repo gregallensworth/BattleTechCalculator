@@ -48,6 +48,7 @@
     <icon src="resources/ios/icon/icon-60@2x.png" width="120" height="120"/>
     <icon src="resources/ios/icon/icon-72.png" width="72" height="72"/>
     <icon src="resources/ios/icon/icon-76.png" width="76" height="76"/>
+    <icon src="resources/ios/icon/icon-76@2.png" width="152" height="152"/>
     <icon src="resources/ios/icon/icon-small.png" width="29" height="29"/>
     <icon src="resources/ios/icon/icon-small@2x.png" width="58" height="58"/>
     <icon src="resources/ios/icon/icon-small@3x.png" width="87" height="87"/>
